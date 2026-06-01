@@ -1,56 +1,107 @@
 {
   "name": "cellforge-loaders",
   "version": "0.1.0",
+  "description": "Animated cell-based React loader primitives from CellForge.",
   "license": "MIT",
-  "private": true,
   "homepage": "https://cellforge.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cellforge-dev/cellforge.git"
+    "url": "git+https://github.com/cellforge-dev/cellforge.git"
   },
   "bugs": {
     "url": "https://github.com/cellforge-dev/cellforge/issues"
   },
-  "engines": {
-    "node": ">=20.9.0 <23"
-  },
   "type": "module",
+  "sideEffects": [
+    "*.css",
+    "dist/*.css"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cellforge",
+    "react",
+    "loader",
+    "loading",
+    "animation",
+    "shadcn",
+    "typescript"
+  ],
   "packageManager": "pnpm@9.12.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm smoke:consumer && pnpm build",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run smoke:consumer && npm run package:build && npm run build",
     "start": "next start",
     "lint": "eslint .",
+    "package:build": "tsup loaders/index.ts --format esm --dts --external react --tsconfig tsconfig.package.json --out-dir dist --clean && node scripts/copy-package-assets.mjs",
+    "prepack": "npm run package:build",
+    "prepublishOnly": "npm run check",
     "registry:build": "tsx scripts/build-registry.ts",
     "smoke:consumer": "tsx scripts/smoke-consumer.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "@base-ui/react": "^1.4.1",
-    "dialkit": "^1.2.0",
-    "framer-motion": "^12.38.0",
-    "geist": "^1.7.0",
-    "motion": "^12.38.0",
-    "next": "^16.0.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "shiki": "^4.0.2"
+  "peerDependencies": {
+    "react": ">=18.2.0 || >=19.0.0",
+    "react-dom": ">=18.2.0 || >=19.0.0"
   },
   "devDependencies": {
+    "@base-ui/react": "^1.4.1",
     "@tailwindcss/postcss": "^4",
     "@testing-library/react": "^16.1.0",
     "@types/node": "^22.10.1",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
+    "dialkit": "^1.2.0",
     "eslint": "^9.16.0",
     "eslint-config-next": "^16.0.0",
+    "framer-motion": "^12.38.0",
+    "geist": "^1.7.0",
     "jsdom": "^25.0.1",
+    "motion": "^12.38.0",
+    "next": "^16.0.0",
     "postcss": "^8.4.49",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "shiki": "^4.0.2",
     "tailwindcss": "^4.2.4",
+    "tsup": "^8.5.1",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
     "vitest": "^2.1.8"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "eslint-import-resolver-node": "^0.3.10",
+    "eslint-import-resolver-typescript": "^3.10.1",
+    "eslint-module-utils": "^2.12.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-scope": "^8.4.0",
+    "eslint-visitor-keys": "^4.2.1",
+    "typescript-eslint": "^8.59.0"
+  },
+  "author": ""
 }

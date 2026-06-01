@@ -5,7 +5,7 @@ const config = [
   ...coreWebVitals,
   ...typescript,
   {
-    ignores: ["public/r/**"]
+    ignores: ["dist/**", "public/r/**"]
   },
   {
     rules: {

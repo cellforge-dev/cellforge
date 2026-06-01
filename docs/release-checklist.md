@@ -1,6 +1,6 @@
 # CellForge Release Checklist
 
-Use this checklist before a public site update, registry update, or future npm release.
+Use this checklist before a public site update, registry update, or npm release.
 
 ## Always
 
@@ -10,6 +10,8 @@ Use this checklist before a public site update, registry update, or future npm r
 - Run `pnpm test`.
 - Run `REGISTRY_HOMEPAGE=https://cellforge.dev pnpm registry:build`.
 - Run `pnpm smoke:consumer`.
+- Run `pnpm package:build`.
+- Run `npm pack --dry-run`.
 - Run `pnpm build`.
 - Confirm `git diff --exit-code registry.json public/r` after registry generation.
 - Open `https://cellforge.dev`.
@@ -23,13 +25,11 @@ Use this checklist before a public site update, registry update, or future npm r
 - Check `components.json` examples in docs.
 - Test one direct URL install and one scoped registry install in a clean consumer app.
 
-## Before A Future npm Release
+## Before An npm Release
 
-- Decide package name and scope.
-- Remove `private: true` only when package exports are ready.
-- Add an `exports` map.
-- Verify ESM/CJS expectations.
-- Add package-level README content.
+- Confirm package name, version, `exports`, `files`, `peerDependencies`, and `publishConfig`.
+- Verify `dist/index.js`, `dist/index.d.ts`, and `dist/styles.css` exist.
+- Test importing `cellforge-loaders` from a clean consumer project.
 - Run `npm publish --dry-run`.
 - Publish with two-factor authentication enabled on npm.
 

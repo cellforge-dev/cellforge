@@ -26,8 +26,10 @@ const componentsJsonExample = `{
 
 const installCommand = `npx shadcn@latest add @cellforge/cell-square-3`;
 const installAllCommand = `npx shadcn@latest add @cellforge/all`;
+const npmInstallCommand = `npm install cellforge-loaders`;
 
 const globalsCssImportExample = `@import "../components/cellforge-loader.css";`;
+const npmCssImportExample = `import "cellforge-loaders/styles.css";`;
 
 const usageExample = `import { CellSquare3 } from "@/components/ui/cell-square-3";
 
@@ -45,6 +47,18 @@ export function SaveButton({ isSaving }: { isSaving: boolean }) {
   );
 }`;
 
+const npmUsageExample = `import "cellforge-loaders/styles.css";
+import { CellSquare3 } from "cellforge-loaders";
+
+export function SaveButton({ isSaving }: { isSaving: boolean }) {
+  return (
+    <button type="button" disabled={isSaving} aria-busy={isSaving}>
+      {isSaving ? <CellSquare3 size={18} dotSize={3} ariaLabel="Saving" /> : null}
+      <span>{isSaving ? "Saving..." : "Save changes"}</span>
+    </button>
+  );
+}`;
+
 export default function UsagePage() {
   return (
     <main className="mx-auto min-h-dvh w-full max-w-5xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
@@ -52,12 +66,12 @@ export default function UsagePage() {
         <header className="grid gap-3">
           <p className="theme-text-muted text-xs uppercase tracking-[0.22em]">Registry path</p>
           <h1 className="theme-text-strong max-w-3xl text-3xl tracking-tight sm:text-4xl">
-            Install loaders through the shadcn registry.
+            Install loaders through the shadcn registry or npm.
           </h1>
           <p className="theme-text max-w-[74ch] text-sm leading-relaxed">
             Use this path when your app already uses shadcn or can add a `components.json`.
             The CLI pulls editable source into your project, so the installed loader is local code,
-            not a runtime package dependency.
+            not a runtime package dependency. If you prefer a regular dependency, use `cellforge-loaders`.
           </p>
         </header>
 
@@ -130,6 +144,22 @@ export default function UsagePage() {
           <ManualCodePanel
             title="Save button example"
             code={usageExample}
+            lang="tsx"
+            scrollClassName="min-h-[36dvh] max-h-[58dvh] overflow-x-auto"
+          />
+        </section>
+
+        <section className="grid gap-3">
+          <h2 className="theme-text-strong text-lg tracking-tight">npm alternative</h2>
+          <p className="theme-text max-w-[72ch] text-sm leading-relaxed">
+            Use the npm package when you want a normal React dependency instead of copied source files.
+            Import the package CSS once, then import loaders from `cellforge-loaders`.
+          </p>
+          <ManualCodePanel title="Install package" code={npmInstallCommand} lang="bash" />
+          <ManualCodePanel title="Import CSS once" code={npmCssImportExample} lang="tsx" />
+          <ManualCodePanel
+            title="Runtime package example"
+            code={npmUsageExample}
             lang="tsx"
             scrollClassName="min-h-[36dvh] max-h-[58dvh] overflow-x-auto"
           />

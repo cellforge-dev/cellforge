@@ -1,6 +1,6 @@
 # CellForge
 
-![CellForge wordmark](./public/brand/cellforge-wordmark.svg)
+![CellForge wordmark](https://cellforge.dev/brand/cellforge-wordmark.svg)
 
 [![CI](https://github.com/cellforge-dev/cellforge/actions/workflows/ci.yml/badge.svg)](https://github.com/cellforge-dev/cellforge/actions/workflows/ci.yml)
 
@@ -9,8 +9,8 @@ CellForge is an open-source loader system for React teams. It ships animated cel
 - Website: https://cellforge.dev
 - Repository: https://github.com/cellforge-dev/cellforge
 - License: MIT
-- Current distribution: shadcn-style source registry
-- npm package: not published yet
+- Current distribution: shadcn-style source registry and npm runtime package
+- npm package: `cellforge-loaders`
 
 ## What You Get
 
@@ -67,6 +67,37 @@ export function SaveButton({ isSaving }: { isSaving: boolean }) {
   );
 }
 ```
+
+## npm Runtime Package
+
+Use the npm package when you prefer a normal React dependency instead of copying source through the registry.
+
+```bash
+npm install cellforge-loaders
+```
+
+Import the package CSS once in your app:
+
+```tsx
+import "cellforge-loaders/styles.css";
+```
+
+Then import any loader component:
+
+```tsx
+import { CellSquare3 } from "cellforge-loaders";
+
+export function SaveButton({ isSaving }: { isSaving: boolean }) {
+  return (
+    <button type="button" disabled={isSaving} aria-busy={isSaving}>
+      {isSaving ? <CellSquare3 size={18} dotSize={3} ariaLabel="Saving" /> : null}
+      <span>{isSaving ? "Saving..." : "Save changes"}</span>
+    </button>
+  );
+}
+```
+
+The package keeps the original `Dotm*` exports and also exposes CellForge aliases such as `CellSquare3`, `CellOrbit1`, `CellAngle1`, and `CellLattice1`.
 
 ## Manual Setup
 
@@ -137,9 +168,12 @@ scripts/              Registry build and consumer smoke checks
 
 ## Publishing Model
 
-CellForge currently publishes source through `https://cellforge.dev/r/*`. That is enough for shadcn installs.
+CellForge supports two install models:
 
-An npm package can be added later if the project needs a runtime import path such as `@cellforge/react`. Until then, `package.json` intentionally remains `private: true` to prevent accidental npm publishing.
+- `https://cellforge.dev/r/*` for shadcn-style source installs.
+- `cellforge-loaders` for npm runtime imports.
+
+The npm package publishes only `dist`, `README.md`, and `LICENSE`. React is a peer dependency, and site-only packages such as Next.js are kept out of the runtime dependency graph.
 
 ## Repository Health
 

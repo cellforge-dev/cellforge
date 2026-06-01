@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "incremental": false,
+    "noEmit": false,
+    "tsBuildInfoFile": null,
+    "types": []
+  },
+  "include": [
+    "loaders/**/*.ts",
+    "loaders/**/*.tsx"
+  ],
+  "exclude": [
+    "loaders/__tests__",
+    "node_modules",
+    "public/r"
+  ]
+}

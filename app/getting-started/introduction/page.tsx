@@ -10,16 +10,16 @@ export default function IntroductionPage() {
           <p className="theme-text-muted text-xs">Introduction</p>
           <h1 className="theme-text-strong text-2xl tracking-tight sm:text-3xl">CellForge: loader motion that fits your brand</h1>
           <p className="theme-text max-w-[72ch] text-sm leading-relaxed">
-            CellForge is a component library for branded loading states. Install from the shadcn registry,
-            tune a loader in Studio, then ship source code that stays lightweight and easy to maintain.
+            CellForge is a component library for branded loading states. Install from the shadcn registry or npm,
+            tune a loader in Studio, then ship motion that stays lightweight and easy to maintain.
           </p>
         </header>
 
         <section className="grid gap-3">
           <h2 className="theme-text-strong text-lg tracking-tight">What this project is</h2>
           <p className="theme-text max-w-[72ch] text-sm leading-relaxed">
-            CellForge follows the same install model many teams already use with shadcn: pull a component into
-            your codebase, then edit it like local code. Studio adds a visual layer for picking motion, shape,
+            CellForge supports two install models: pull editable source through the shadcn-style registry,
+            or install the runtime package from npm. Studio adds a visual layer for picking motion, shape,
             spacing, color, and framework output before you copy.
           </p>
         </section>
@@ -29,7 +29,7 @@ export default function IntroductionPage() {
           <ul className="theme-text grid gap-2 text-sm leading-relaxed">
             <li>- focused loading components instead of a full design framework</li>
             <li>- open source code you own after installation</li>
-            <li>- registry distribution that fits existing shadcn-style workflows</li>
+            <li>- registry distribution for source ownership and npm distribution for runtime imports</li>
             <li>- primitives that adapt to your spacing, color, and motion tokens quickly</li>
           </ul>
         </section>
