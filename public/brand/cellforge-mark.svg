@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">CellForge mark</title>
+  <desc id="desc">An angular forge frame holding four animated cells.</desc>
+  <rect width="512" height="512" rx="108" fill="#090909"/>
+  <path d="M143 72h226l71 71v226l-71 71H143l-71-71V143l71-71Z" fill="#141414" stroke="#343434" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M177 157h142l36 36v126l-36 36H177l-20-20V177l20-20Z" fill="#0b0b0b" stroke="#8f8f8f" stroke-width="14" stroke-linejoin="round"/>
+  <rect x="184" y="184" width="64" height="64" rx="14" fill="#f4f4f5"/>
+  <rect x="264" y="184" width="64" height="64" rx="14" fill="#f4f4f5" opacity=".42"/>
+  <rect x="184" y="264" width="64" height="64" rx="14" fill="#f4f4f5" opacity=".42"/>
+  <rect x="264" y="264" width="64" height="64" rx="14" fill="#f4f4f5"/>
+  <path d="M256 72v85M256 355v85M72 256h85M355 256h85" stroke="#c8c8c8" stroke-width="16" stroke-linecap="round"/>
+  <path d="M123 123 72 72M389 123l51-51M123 389l-51 51M389 389l51 51" stroke="#5e5e5e" stroke-width="12" stroke-linecap="round"/>
+</svg>

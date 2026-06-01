@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://cellforge.dev/getting-started/introduction
+    about: Read the getting started docs.
+  - name: Live Studio
+    url: https://cellforge.dev/studio
+    about: Tune and export loader code.

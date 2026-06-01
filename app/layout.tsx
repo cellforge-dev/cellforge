@@ -16,8 +16,8 @@ const ogImageAlt =
 
 const ogImage = {
   url: "/og.png",
-  width: 1024,
-  height: 537,
+  width: 1200,
+  height: 630,
   alt: ogImageAlt,
   type: "image/png" as const
 };
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   applicationName: defaultTitle,
   title: {
     default: defaultTitle,
-    template: "%s · CellForge"
+    template: "%s | CellForge"
   },
   description: siteDescription,
   keywords: [
@@ -124,8 +124,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@cellforge",
-    creator: "@cellforge",
     title: defaultTitle,
     description: siteDescription,
     images: [{ url: "/og.png", alt: ogImageAlt }]

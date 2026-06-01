@@ -76,11 +76,11 @@ const codeTargets: Array<{ label: string; value: CodeTarget }> = [
   { label: "React", value: "react" },
   { label: "CSS", value: "css" },
   { label: "Tailwind", value: "tailwind" },
-  { label: "Vue", value: "vue" },
-  { label: "Svelte", value: "svelte" },
-  { label: "RN", value: "rn" },
-  { label: "SwiftUI", value: "swiftui" },
-  { label: "Lottie", value: "lottie" },
+  { label: "Vue spec", value: "vue" },
+  { label: "Svelte spec", value: "svelte" },
+  { label: "RN spec", value: "rn" },
+  { label: "SwiftUI spec", value: "swiftui" },
+  { label: "Lottie spec", value: "lottie" },
   { label: "JSON", value: "json" }
 ];
 
@@ -308,6 +308,7 @@ return `<CellForgeImage
 function buildCode(target: CodeTarget, selected: StudioLoaderOption, props: DotMatrixCommonProps) {
   const itemName = publicItemName(selected.slug);
   const componentName = packageImportName(selected.slug);
+  const localImportPath = `@/components/ui/${itemName}`;
   const config = {
     loader: itemName,
     size: props.size,
@@ -349,50 +350,25 @@ function buildCode(target: CodeTarget, selected: StudioLoaderOption, props: DotM
 
   if (target === "vue") {
     return `<script setup lang="ts">
-import { ${componentName} } from "@cellforge/react";
-</script>
-
-<template>
-  <${componentName}
-    :size="${formatNumber(Number(props.size))}"
-    :dot-size="${formatNumber(Number(props.dotSize))}"
-    :cell-padding="${formatNumber(Number(props.cellPadding ?? 0))}"
-    color="${props.color}"
-    pattern="${props.pattern}"
-    dot-shape="${props.dotShape}"
-  />
-</template>`;
+// CellForge does not publish a Vue package yet.
+// Use this prop map when porting ${itemName} to a Vue component.
+const cellforgeLoader = ${JSON.stringify(config, null, 2)};
+</script>`;
   }
 
   if (target === "svelte") {
     return `<script lang="ts">
-  import { ${componentName} } from "@cellforge/react";
+  // CellForge does not publish a Svelte package yet.
+  // Use this prop map when porting ${itemName} to a Svelte component.
+  const cellforgeLoader = ${JSON.stringify(config, null, 2)};
 </script>
-
-<${componentName}
-  size={${formatNumber(Number(props.size))}}
-  dotSize={${formatNumber(Number(props.dotSize))}}
-  cellPadding={${formatNumber(Number(props.cellPadding ?? 0))}}
-  color="${props.color}"
-  pattern="${props.pattern}"
-  dotShape="${props.dotShape}"
-/>`;
+`;
   }
 
   if (target === "rn") {
-    return `import { CellLoader } from "@cellforge/react-native";
-
-export function LoadingState() {
-  return (
-    <CellLoader
-      preset="${itemName}"
-      size={${formatNumber(Number(props.size))}}
-      cellSize={${formatNumber(Number(props.dotSize))}}
-      color="${props.color}"
-      speed={${formatNumber(Number(props.speed))}}
-    />
-  );
-}`;
+    return `// React Native package is not published yet.
+// Use this object as a porting spec.
+export const cellforgeLoader = ${JSON.stringify(config, null, 2)};`;
   }
 
   if (target === "swiftui") {
@@ -416,7 +392,7 @@ export function LoadingState() {
 }`;
   }
 
-  return `import { ${componentName} } from "@cellforge/react";
+  return `import { ${componentName} } from "${localImportPath}";
 
 export function LoadingState() {
   return (
