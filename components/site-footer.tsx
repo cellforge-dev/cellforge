@@ -36,7 +36,7 @@ export function SiteFooter() {
               {link.label}
             </a>
           ))}
-          <span className="uppercase tracking-[0.2em] text-fg-dim">MIT / v0.1.1</span>
+          <span className="uppercase tracking-[0.2em] text-fg-dim">MIT</span>
         </div>
       </div>
     </footer>
