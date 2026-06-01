@@ -19,7 +19,7 @@ const DECAY = 0.72;
 const COL_WARP = 0.07;
 
 export function CellSquare10({
-  speed = 1,
+  speed = 2.5,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

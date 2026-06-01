@@ -17,7 +17,7 @@ const NEAR_SWEEP_OPACITY = 0.36;
 const RING_OPACITY = 0.22;
 
 export function CellOrbit4({
-  speed = 1,
+  speed = 1.55,
   animated = true,
   hoverAnimated = false,
   ...rest

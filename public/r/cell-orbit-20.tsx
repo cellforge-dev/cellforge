@@ -26,7 +26,7 @@ const GLYPHS: ReadonlyArray<ReadonlySet<string>> = [
 ];
 
 export function CellOrbit20({
-  speed = 1,
+  speed = 1.5,
   animated = true,
   hoverAnimated = false,
   ...rest

@@ -61,7 +61,7 @@ function opacityFromTail(distance: number, tail: readonly number[]): number {
 }
 
 export function CellSquare20({
-  speed = 1,
+  speed = 1.45,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

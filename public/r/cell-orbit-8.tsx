@@ -16,7 +16,7 @@ const PULSE_CORE = 0.95;
 const PULSE_RING = 0.44;
 
 export function CellOrbit8({
-  speed = 1,
+  speed = 1.95,
   animated = true,
   hoverAnimated = false,
   ...rest

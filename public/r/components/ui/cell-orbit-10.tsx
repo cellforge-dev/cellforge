@@ -23,7 +23,7 @@ function moduloDistance(a: number, b: number, mod: number): number {
 }
 
 export function CellOrbit10({
-  speed = 1,
+  speed = 1.75,
   animated = true,
   hoverAnimated = false,
   ...rest

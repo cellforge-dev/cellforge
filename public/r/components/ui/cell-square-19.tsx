@@ -65,7 +65,7 @@ function headInfluence(dot: Point, head: Point): number {
 }
 
 export function CellSquare19({
-  speed = 1,
+  speed = 1.45,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

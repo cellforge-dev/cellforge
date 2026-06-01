@@ -60,7 +60,7 @@ function resolveBraille(row: number, col: number): { bit: number } | null {
 }
 
 export function CellSquare9({
-  speed = 1,
+  speed = 1.5,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

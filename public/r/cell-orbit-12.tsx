@@ -17,7 +17,7 @@ const MID_OPACITY = 0.3;
 const ARC_OPACITY = 0.96;
 
 export function CellOrbit12({
-  speed = 1,
+  speed = 1.7,
   animated = true,
   hoverAnimated = false,
   ...rest

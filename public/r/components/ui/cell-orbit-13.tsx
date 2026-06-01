@@ -18,7 +18,7 @@ const NEAR_STRAND_OPACITY = 0.5;
 const BRIDGE_OPACITY = 0.3;
 
 export function CellOrbit13({
-  speed = 1,
+  speed = 1.55,
   animated = true,
   hoverAnimated = false,
   ...rest

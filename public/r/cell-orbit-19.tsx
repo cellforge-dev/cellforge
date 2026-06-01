@@ -28,7 +28,7 @@ const ORBIT_POINTS: ReadonlyArray<readonly [number, number]> = [
 ];
 
 export function CellOrbit19({
-  speed = 1,
+  speed = 1.6,
   animated = true,
   hoverAnimated = false,
   ...rest

@@ -21,7 +21,7 @@ function clampLevel(value: number): number {
 }
 
 export function CellSquare18({
-  speed = 1,
+  speed = 1.35,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

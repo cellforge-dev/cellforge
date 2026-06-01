@@ -48,7 +48,7 @@ function buildRowCyclePath(): number[] {
 }
 
 export function CellSquare2({
-  speed = 1,
+  speed = 1.15,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

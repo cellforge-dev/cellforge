@@ -16,7 +16,7 @@ const ORBIT_OPACITY = 0.96;
 const NEAR_ORBIT_OPACITY = 0.34;
 
 export function CellOrbit6({
-  speed = 1,
+  speed = 1.6,
   animated = true,
   hoverAnimated = false,
   ...rest

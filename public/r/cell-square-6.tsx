@@ -12,7 +12,7 @@ export type CellSquare6Props = CellForgeCommonProps;
 const COLUMN_HEIGHT = 5;
 
 export function CellSquare6({
-  speed = 1,
+  speed = 2.2,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

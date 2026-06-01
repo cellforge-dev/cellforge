@@ -26,7 +26,7 @@ const BRAILLE_PHASES: ReadonlyArray<ReadonlySet<string>> = [
 ];
 
 export function CellOrbit15({
-  speed = 1,
+  speed = 1.65,
   animated = true,
   hoverAnimated = false,
   ...rest

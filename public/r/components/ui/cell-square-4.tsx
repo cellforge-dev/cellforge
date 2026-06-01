@@ -56,7 +56,7 @@ const animationResolver: DotAnimationResolver = ({ isActive, index, row, col, re
 };
 
 export function CellSquare4({
-  speed = 1,
+  speed = 1.35,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

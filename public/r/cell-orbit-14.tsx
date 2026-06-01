@@ -18,7 +18,7 @@ const SIDE_OPACITY = 0.56;
 const GHOST_OPACITY = 0.28;
 
 export function CellOrbit14({
-  speed = 1,
+  speed = 1.75,
   animated = true,
   hoverAnimated = false,
   ...rest

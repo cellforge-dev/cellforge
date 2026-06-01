@@ -38,7 +38,7 @@ function drainHeight(col: number, drainTick: number): number {
 }
 
 export function CellSquare8({
-  speed = 1,
+  speed = 1.4,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

@@ -15,7 +15,7 @@ const BASE_OPACITY = 0.08;
 const GATE_OPACITY = 0.92;
 
 export function CellOrbit7({
-  speed = 1,
+  speed = 1.8,
   animated = true,
   hoverAnimated = false,
   ...rest

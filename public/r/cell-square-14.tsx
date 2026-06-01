@@ -36,7 +36,7 @@ function maskCell(mask: string, row: number, col: number): FrameCell {
 }
 
 export function CellSquare14({
-  speed = 1,
+  speed = 1.25,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

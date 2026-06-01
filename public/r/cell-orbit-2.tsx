@@ -30,7 +30,7 @@ const LOOP_LEN = RING_PATH.length;
 const BASE_OPACITY = 0.08;
 
 export function CellOrbit2({
-  speed = 1,
+  speed = 1.8,
   animated = true,
   hoverAnimated = false,
   ...rest

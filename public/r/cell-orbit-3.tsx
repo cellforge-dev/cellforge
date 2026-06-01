@@ -36,7 +36,7 @@ const CIRCULAR_RING_PATH: readonly number[] = [
 const LOOP_LEN = CIRCULAR_RING_PATH.length;
 
 export function CellOrbit3({
-  speed = 1,
+  speed = 1.6,
   animated = true,
   hoverAnimated = false,
   ...rest

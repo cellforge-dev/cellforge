@@ -16,7 +16,7 @@ const BLADE_OPACITY = 0.94;
 const HALO_OPACITY = 0.34;
 
 export function CellOrbit5({
-  speed = 1,
+  speed = 1.7,
   animated = true,
   hoverAnimated = false,
   ...rest

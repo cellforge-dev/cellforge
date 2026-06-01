@@ -18,7 +18,7 @@ const STEP_COUNT = 20;
 const HELIX_LOOP_RADIANS = (Math.PI * 2) / (STEP_COUNT - 1);
 
 export function CellSquare16({
-  speed = 1,
+  speed = 2.5,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

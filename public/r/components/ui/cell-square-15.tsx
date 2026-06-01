@@ -18,7 +18,7 @@ const NEAR_STRAND_OPACITY = 0.24;
 const STRAND_LOOPS = 2;
 
 export function CellSquare15({
-  speed = 1,
+  speed = 1.25,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

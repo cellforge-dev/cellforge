@@ -33,7 +33,7 @@ const animationResolver: DotAnimationResolver = ({ isActive, manhattanDistance, 
 };
 
 export function CellSquare11({
-  speed = 1,
+  speed = 1.25,
   pattern = "full",
   animated = true,
   hoverAnimated = false,

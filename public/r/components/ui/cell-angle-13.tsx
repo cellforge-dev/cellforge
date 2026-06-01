@@ -97,7 +97,7 @@ function opacityForCell(row: number, col: number, phase: number): number {
 
 export function CellAngle13({
   size = 30,
-  dotSize = 4,
+  dotSize = 6.5,
   color = "currentColor",
   colorPreset,
   ariaLabel = "Loading",
@@ -107,7 +107,7 @@ export function CellAngle13({
   halo = 0,
   dotClassName,
   dotShape = "circle",
-  speed = 1,
+  speed = 1.65,
   animated = true,
   hoverAnimated = false,
   cellPadding,

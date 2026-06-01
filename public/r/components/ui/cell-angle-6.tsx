@@ -182,7 +182,7 @@ function cycleParams(phase: number): {
 
 export function CellAngle6({
   size = 30,
-  dotSize = 4,
+  dotSize = 6.5,
   color = "currentColor",
   colorPreset,
   ariaLabel = "Loading",
@@ -192,7 +192,7 @@ export function CellAngle6({
   halo = 0,
   dotClassName,
   dotShape = "circle",
-  speed = 1,
+  speed = 2.2,
   animated = true,
   hoverAnimated = false,
   cellPadding,

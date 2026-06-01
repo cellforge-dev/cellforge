@@ -51,12 +51,16 @@ const sharedSourceFiles: Array<{ absolutePath: string; targetPath: string; type:
   }
 ];
 
+function normalizeSource(source: string): string {
+  return source.replace(/\r\n/g, "\n");
+}
+
 async function readSource(relativePath: string): Promise<string> {
-  return readFile(path.join(loadersRoot, relativePath), "utf-8");
+  return normalizeSource(await readFile(path.join(loadersRoot, relativePath), "utf-8"));
 }
 
 async function readAbsolute(filePath: string): Promise<string> {
-  return readFile(filePath, "utf-8");
+  return normalizeSource(await readFile(filePath, "utf-8"));
 }
 
 async function writeRegistrySource(pathInRegistry: string, content: string): Promise<void> {

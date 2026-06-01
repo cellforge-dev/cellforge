@@ -56,7 +56,7 @@ function isWithinTriangleMask(row: number, col: number): boolean {
 
 export function CellAngle10({
   size = 30,
-  dotSize = 4,
+  dotSize = 6.5,
   color = "currentColor",
   colorPreset,
   ariaLabel = "Loading",
@@ -66,7 +66,7 @@ export function CellAngle10({
   halo = 0,
   dotClassName,
   dotShape = "circle",
-  speed = 1,
+  speed = 1.8,
   animated = true,
   hoverAnimated = false,
   cellPadding,
