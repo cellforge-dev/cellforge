@@ -155,6 +155,14 @@ export default function UsagePage() {
             Use the npm package when you want a normal React dependency instead of copied source files.
             Import the package CSS once, then import loaders from `cellforge-loaders`.
           </p>
+          <a
+            href="https://www.npmjs.com/package/cellforge-loaders"
+            target="_blank"
+            rel="noreferrer"
+            className="theme-link inline-flex text-sm underline underline-offset-4"
+          >
+            Open npm package
+          </a>
           <ManualCodePanel title="Install package" code={npmInstallCommand} lang="bash" />
           <ManualCodePanel title="Import CSS once" code={npmCssImportExample} lang="tsx" />
           <ManualCodePanel

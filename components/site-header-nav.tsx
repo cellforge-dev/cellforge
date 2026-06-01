@@ -14,6 +14,11 @@ const navItems = [
   { label: "Manual setup", href: "/getting-started/manual" }
 ] as const;
 
+const externalItems = [
+  { label: "GitHub", href: "https://github.com/cellforge-dev/cellforge" },
+  { label: "npm", href: "https://www.npmjs.com/package/cellforge-loaders" }
+] as const;
+
 export function SiteHeaderNav() {
   const pathname = usePathname();
 
@@ -49,7 +54,19 @@ export function SiteHeaderNav() {
           })}
         </nav>
 
-        <div className="hidden w-9 shrink-0 sm:block" aria-hidden="true" />
+        <div className="hidden items-center gap-3 text-sm text-fg-dim lg:flex">
+          {externalItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors duration-150 ease-out hover:text-link-hover"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
       </div>
     </header>
   );

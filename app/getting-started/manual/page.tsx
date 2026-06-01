@@ -91,6 +91,14 @@ export default async function ManualGettingStartedPage() {
           <Link href="/getting-started/usage" className="theme-link inline-flex text-sm underline underline-offset-4">
             Compare with registry usage
           </Link>
+          <a
+            href="https://www.npmjs.com/package/cellforge-loaders"
+            target="_blank"
+            rel="noreferrer"
+            className="theme-link inline-flex text-sm underline underline-offset-4"
+          >
+            Open npm package
+          </a>
         </section>
       </section>
     </main>

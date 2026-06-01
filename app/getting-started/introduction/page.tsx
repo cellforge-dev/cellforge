@@ -62,6 +62,28 @@ export default function IntroductionPage() {
         </section>
 
         <section className="grid gap-3">
+          <h2 className="theme-text-strong text-lg tracking-tight">Project links</h2>
+          <div className="flex flex-wrap gap-3 text-sm">
+            <a
+              href="https://github.com/cellforge-dev/cellforge"
+              target="_blank"
+              rel="noreferrer"
+              className="theme-link underline decoration-fg-dim underline-offset-4"
+            >
+              GitHub repository
+            </a>
+            <a
+              href="https://www.npmjs.com/package/cellforge-loaders"
+              target="_blank"
+              rel="noreferrer"
+              className="theme-link underline decoration-fg-dim underline-offset-4"
+            >
+              npm package
+            </a>
+          </div>
+        </section>
+
+        <section className="grid gap-3">
           <h2 className="theme-text-strong text-lg tracking-tight">Start here</h2>
           <p className="theme-text max-w-[72ch] text-sm leading-relaxed">
             Jump into{" "}
