@@ -2,7 +2,7 @@ export type SiteMarkIconProps = {
   className?: string;
 };
 
-/** CellForge mark: an angular forge frame with four active cells. */
+/** CellForge mark: a segmented loader frame with four luminous cells. */
 export function SiteMarkIcon({ className }: SiteMarkIconProps) {
   return (
     <svg
@@ -12,28 +12,30 @@ export function SiteMarkIcon({ className }: SiteMarkIconProps) {
       className={className}
       aria-hidden
     >
-      <rect width="64" height="64" rx="16" fill="var(--color-surface-raised)" />
+      <rect width="64" height="64" rx="12" fill="var(--color-background)" />
       <path
-        d="M18 12h28l6 6v28l-6 6H18l-6-6V18l6-6Z"
-        fill="var(--color-background)"
+        d="M15 22V14l8-8h11M49 22V14l-8-8H30M15 42v8l8 8h11M49 42v8l-8 8H30"
+        fill="none"
         stroke="var(--color-border)"
-        strokeWidth="2"
-      />
-      <path
-        d="M22 20h20l4 4v16l-4 4H22l-4-4V24l4-4Z"
-        stroke="var(--color-fg-dim)"
-        strokeWidth="2"
+        strokeWidth="4"
         strokeLinejoin="round"
       />
-      <rect x="22" y="22" width="8" height="8" rx="2" fill="var(--color-dot-on)" />
-      <rect x="34" y="22" width="8" height="8" rx="2" fill="var(--color-dot-on)" opacity="0.45" />
-      <rect x="22" y="34" width="8" height="8" rx="2" fill="var(--color-dot-on)" opacity="0.45" />
-      <rect x="34" y="34" width="8" height="8" rx="2" fill="var(--color-dot-on)" />
       <path
-        d="M32 12v8M32 44v8M12 32h8M44 32h8"
+        d="M22 21h10l3 3h7l4 4v8l-4 4h-7l-3 3H22l-4-4V25l4-4Z"
+        fill="var(--color-surface-raised)"
+        stroke="var(--color-fg-dim)"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <rect x="22" y="22" width="10" height="10" rx="2.5" fill="var(--color-dot-on)" />
+      <rect x="34" y="22" width="10" height="10" rx="2.5" fill="var(--color-dot-on)" />
+      <rect x="22" y="34" width="10" height="10" rx="2.5" fill="var(--color-dot-on)" />
+      <rect x="34" y="34" width="10" height="10" rx="2.5" fill="var(--color-dot-on)" />
+      <path
+        d="M29 14v5M32 14v5M35 14v5M29 45v5M32 45v5M35 45v5M14 29h5M14 32h5M14 35h5M45 29h5M45 32h5M45 35h5"
         stroke="var(--color-fg-muted)"
-        strokeWidth="2"
-        strokeLinecap="round"
+        strokeWidth="1.8"
+        strokeLinecap="square"
       />
     </svg>
   );

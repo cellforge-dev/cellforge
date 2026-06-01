@@ -1,16 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="256" viewBox="0 0 980 256" role="img" aria-labelledby="title desc">
   <title id="title">CellForge</title>
-  <desc id="desc">CellForge wordmark with an angular cell mark.</desc>
+  <desc id="desc">CellForge wordmark with a luminous dotted loader mark.</desc>
+  <defs>
+    <filter id="wordGlow" x="-45%" y="-45%" width="190%" height="190%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.95 0 1 0 0 0.95 0 0 1 0 0.95 0 0 0 .62 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="wordFrame" x1="40" y1="28" x2="142" y2="156" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3d3d3d"/>
+      <stop offset=".58" stop-color="#191919"/>
+      <stop offset="1" stop-color="#343434"/>
+    </linearGradient>
+  </defs>
   <rect width="980" height="256" rx="40" fill="#090909"/>
   <g transform="translate(52 48)">
-    <rect width="160" height="160" rx="34" fill="#111111"/>
-    <path d="M45 22h70l23 23v70l-23 23H45l-23-23V45l23-23Z" fill="#171717" stroke="#3a3a3a" stroke-width="7" stroke-linejoin="round"/>
-    <path d="M57 50h45l11 11v41l-11 11H57l-7-7V57l7-7Z" fill="#0b0b0b" stroke="#9b9b9b" stroke-width="5" stroke-linejoin="round"/>
-    <rect x="60" y="60" width="22" height="22" rx="5" fill="#f4f4f5"/>
-    <rect x="88" y="60" width="22" height="22" rx="5" fill="#f4f4f5" opacity=".42"/>
-    <rect x="60" y="88" width="22" height="22" rx="5" fill="#f4f4f5" opacity=".42"/>
-    <rect x="88" y="88" width="22" height="22" rx="5" fill="#f4f4f5"/>
-    <path d="M80 22v28M80 110v28M22 80h28M110 80h28" stroke="#c8c8c8" stroke-width="6" stroke-linecap="round"/>
+    <rect width="160" height="160" rx="28" fill="#070807"/>
+    <g fill="url(#wordFrame)" stroke="#5d5d5d" stroke-width="1.5" stroke-linejoin="round">
+      <path d="M37 43 53 27h29v12H59L39 59v19H27V51l10-8Z"/>
+      <path d="M123 43 107 27H78v12h23l20 20v19h12V51l-10-8Z"/>
+      <path d="M37 117l16 16h29v-12H59l-20-20V82H27v27l10 8Z"/>
+      <path d="M123 117l-16 16H78v-12h23l20-20V82h12v27l-10 8Z"/>
+    </g>
+    <path d="M54 54h25l8 8h20l11 11v26l-11 11H87l-8 8H54L43 107V65l11-11Z" fill="#202020" stroke="#484848" stroke-width="2" stroke-linejoin="round"/>
+    <g filter="url(#wordGlow)" fill="#f8f8f5">
+      <rect x="57" y="57" width="22" height="22" rx="5"/>
+      <rect x="84" y="57" width="22" height="22" rx="5"/>
+      <rect x="57" y="84" width="22" height="22" rx="5"/>
+      <rect x="84" y="84" width="22" height="22" rx="5"/>
+    </g>
+    <g stroke="#f4f4f2" stroke-width="4" stroke-linecap="square" filter="url(#wordGlow)">
+      <path d="M73 35v10M80 35v10M87 35v10"/>
+      <path d="M73 115v10M80 115v10M87 115v10"/>
+      <path d="M35 73h10M35 80h10M35 87h10"/>
+      <path d="M115 73h10M115 80h10M115 87h10"/>
+    </g>
   </g>
   <text x="254" y="119" fill="#f4f4f5" font-family="Inter, Geist, Arial, sans-serif" font-size="66" font-weight="760" letter-spacing="0">CellForge</text>
   <text x="258" y="162" fill="#a1a1aa" font-family="Inter, Geist, Arial, sans-serif" font-size="24" font-weight="500" letter-spacing="0">loader primitives and tuning tools</text>

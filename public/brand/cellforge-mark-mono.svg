@@ -1,12 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">CellForge monochrome mark</title>
-  <desc id="desc">A monochrome angular forge frame holding four cells.</desc>
-  <rect width="512" height="512" rx="108" fill="#ffffff"/>
-  <path d="M143 72h226l71 71v226l-71 71H143l-71-71V143l71-71Z" fill="#ffffff" stroke="#111111" stroke-width="18" stroke-linejoin="round"/>
-  <path d="M177 157h142l36 36v126l-36 36H177l-20-20V177l20-20Z" fill="#ffffff" stroke="#111111" stroke-width="14" stroke-linejoin="round"/>
-  <rect x="184" y="184" width="64" height="64" rx="14" fill="#111111"/>
-  <rect x="264" y="184" width="64" height="64" rx="14" fill="#111111" opacity=".38"/>
-  <rect x="184" y="264" width="64" height="64" rx="14" fill="#111111" opacity=".38"/>
-  <rect x="264" y="264" width="64" height="64" rx="14" fill="#111111"/>
-  <path d="M256 72v85M256 355v85M72 256h85M355 256h85" stroke="#111111" stroke-width="16" stroke-linecap="round"/>
+  <desc id="desc">A monochrome dotted loader cell mark inside a segmented frame.</desc>
+  <rect width="512" height="512" rx="88" fill="#ffffff"/>
+  <g fill="none" stroke="#111111" stroke-width="28" stroke-linejoin="round">
+    <path d="M116 250v-82l56-56h88"/>
+    <path d="M396 250v-82l-56-56h-88"/>
+    <path d="M116 262v82l56 56h88"/>
+    <path d="M396 262v82l-56 56h-88"/>
+  </g>
+  <path d="M174 172h80l22 22h64l34 34v84l-34 34h-64l-22 22h-80l-32-32V204l32-32Z" fill="none" stroke="#111111" stroke-width="12" stroke-linejoin="round"/>
+  <g fill="#111111">
+    <rect x="181" y="181" width="70" height="70" rx="15"/>
+    <rect x="261" y="181" width="70" height="70" rx="15"/>
+    <rect x="181" y="261" width="70" height="70" rx="15"/>
+    <rect x="261" y="261" width="70" height="70" rx="15"/>
+  </g>
+  <g stroke="#111111" stroke-width="11" stroke-linecap="square">
+    <path d="M234 126v31M256 126v31M278 126v31"/>
+    <path d="M234 355v31M256 355v31M278 355v31"/>
+    <path d="M126 234h31M126 256h31M126 278h31"/>
+    <path d="M355 234h31M355 256h31M355 278h31"/>
+  </g>
 </svg>
