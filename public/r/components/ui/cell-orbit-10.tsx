@@ -11,7 +11,6 @@ import type { DotAnimationResolver, CellForgeCommonProps } from "@/components/ui
 
 export type CellOrbit10Props = CellForgeCommonProps;
 
-const STEP_COUNT = 30;
 const BASE_OPACITY = 0.06;
 const LOW_OPACITY = 0.2;
 const MID_OPACITY = 0.48;

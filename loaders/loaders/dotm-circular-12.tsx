@@ -36,7 +36,7 @@ export function DotmCircular12({
   });
 
   const resolver = useMemo<DotAnimationResolver>(() => {
-    return ({ row, col, phase }) => {
+    return ({ row, col }) => {
       if (!isWithinCircularMask(row, col)) {
         return { className: "dmx-inactive" };
       }
@@ -45,7 +45,6 @@ export function DotmCircular12({
       const y = row - 2;
       const ring = Math.sqrt(x * x + y * y);
       const angle = Math.atan2(y, x);
-      const t = reducedMotion || phase === "idle" ? 0 : (step / STEP_COUNT) * Math.PI * 2;
       const stepBand = Math.floor((step / STEP_COUNT) * 8) % 8;
       const targetAngle = stepBand * (Math.PI / 4);
       const angleDelta = Math.acos(Math.cos(angle - targetAngle));
@@ -71,7 +70,7 @@ export function DotmCircular12({
 
       return { style: { opacity } };
     };
-  }, [reducedMotion, step]);
+  }, [step]);
 
   return (
     <DotMatrixBase

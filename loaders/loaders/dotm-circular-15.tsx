@@ -11,7 +11,6 @@ import type { DotAnimationResolver, DotMatrixCommonProps } from "../types";
 
 export type DotmCircular15Props = DotMatrixCommonProps;
 
-const STEP_COUNT = 24;
 const BASE_OPACITY = 0.07;
 const MID_OPACITY = 0.34;
 const HIGH_OPACITY = 0.95;

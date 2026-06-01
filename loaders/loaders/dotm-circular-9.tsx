@@ -36,7 +36,7 @@ export function DotmCircular9({
   });
 
   const resolver = useMemo<DotAnimationResolver>(() => {
-    return ({ row, col, phase }) => {
+    return ({ row, col }) => {
       if (!isWithinCircularMask(row, col)) {
         return { className: "dmx-inactive" };
       }
@@ -45,7 +45,6 @@ export function DotmCircular9({
       const y = row - 2;
       const ring = Math.sqrt(x * x + y * y);
       const angle = Math.atan2(y, x);
-      const t = reducedMotion || phase === "idle" ? 0 : (step / STEP_COUNT) * Math.PI * 2;
       const cardinalCenters = [0, Math.PI / 2, Math.PI, -Math.PI / 2];
       const beaconIndex = Math.floor((step / STEP_COUNT) * cardinalCenters.length) % cardinalCenters.length;
       const activeCenter = cardinalCenters[beaconIndex]!;
@@ -72,7 +71,7 @@ export function DotmCircular9({
 
       return { style: { opacity } };
     };
-  }, [reducedMotion, step]);
+  }, [step]);
 
   return (
     <DotMatrixBase
