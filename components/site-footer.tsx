@@ -1,5 +1,4 @@
-import { DotMatrixIcon } from "@/loaders";
-import { ReducedMotionOverrideProvider } from "@/loaders/hooks/use-prefers-reduced-motion";
+import Image from "next/image";
 
 export function SiteFooter() {
   const links = [
@@ -11,10 +10,14 @@ export function SiteFooter() {
     <footer role="contentinfo" className="mx-auto mt-20 w-full max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
       <div className="flex flex-col gap-4 border-t border-border-soft pt-6 text-sm text-fg-dim sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-3">
-          <span className="grid size-9 place-items-center rounded-lg border border-border-soft bg-surface/70">
-            <ReducedMotionOverrideProvider reducedMotion={false}>
-              <DotMatrixIcon size={22} dotSize={2.4} animated />
-            </ReducedMotionOverrideProvider>
+          <span className="grid size-9 place-items-center overflow-hidden rounded-lg border border-border-soft bg-surface/70 p-0.5">
+            <Image
+              src="/brand/cellforge-avatar.png"
+              alt=""
+              width={32}
+              height={32}
+              className="size-full rounded-[7px] object-cover"
+            />
           </span>
           <div>
             <p className="font-semibold tracking-tight text-fg-strong">CellForge</p>
@@ -33,7 +36,7 @@ export function SiteFooter() {
               {link.label}
             </a>
           ))}
-          <span className="uppercase tracking-[0.2em] text-fg-dim">MIT / v0.1.0</span>
+          <span className="uppercase tracking-[0.2em] text-fg-dim">MIT / v0.1.1</span>
         </div>
       </div>
     </footer>

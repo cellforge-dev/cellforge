@@ -1,6 +1,6 @@
 {
   "name": "cellforge-loaders",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Animated cell-based React loader primitives from CellForge.",
   "license": "MIT",
   "homepage": "https://cellforge.dev",

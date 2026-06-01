@@ -92,6 +92,10 @@ export const metadata: Metadata = {
     "npm",
     "open source"
   ],
+  icons: {
+    icon: [{ url: "/brand/cellforge-avatar.png", type: "image/png" }],
+    apple: [{ url: "/brand/cellforge-avatar.png", type: "image/png" }]
+  },
   authors: [{ name: creatorName, url: creatorUrl }],
   creator: creatorName,
   publisher: creatorName,

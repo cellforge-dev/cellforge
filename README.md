@@ -1,6 +1,6 @@
 # CellForge
 
-![CellForge wordmark](https://cellforge.dev/brand/cellforge-wordmark.svg)
+<img src="https://cellforge.dev/brand/cellforge-avatar.png" alt="CellForge logo" width="132" />
 
 [![CI](https://github.com/cellforge-dev/cellforge/actions/workflows/ci.yml/badge.svg)](https://github.com/cellforge-dev/cellforge/actions/workflows/ci.yml)
 

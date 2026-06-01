@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-
-import { SiteMarkIcon } from "@/components/site-mark-icon";
 
 const navItems = [
   { label: "Gallery", href: "/" },
@@ -30,8 +29,15 @@ export function SiteHeaderNav() {
           aria-label="CellForge home"
           className="group inline-flex items-center gap-3 outline-offset-4"
         >
-          <span className="inline-flex size-9 items-center justify-center rounded-[10px] border border-border-soft bg-surface p-0.5 transition-transform duration-200 ease-out group-hover:-translate-y-0.5 group-hover:rotate-3 motion-reduce:transition-none motion-reduce:group-hover:translate-y-0 motion-reduce:group-hover:rotate-0">
-            <SiteMarkIcon className="size-full shrink-0 select-none" />
+          <span className="inline-flex size-9 items-center justify-center overflow-hidden rounded-[10px] border border-border-soft bg-surface p-0.5 transition-transform duration-200 ease-out group-hover:-translate-y-0.5 group-hover:rotate-3 motion-reduce:transition-none motion-reduce:group-hover:translate-y-0 motion-reduce:group-hover:rotate-0">
+            <Image
+              src="/brand/cellforge-avatar.png"
+              alt=""
+              width={32}
+              height={32}
+              priority
+              className="size-full shrink-0 select-none rounded-[8px] object-cover"
+            />
           </span>
           <span className="theme-text-strong text-lg tracking-tight sm:text-xl">CellForge</span>
         </Link>
